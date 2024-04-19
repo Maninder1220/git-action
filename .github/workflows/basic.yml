@@ -1,0 +1,17 @@
+# Name helps to make reader understand what is about to come
+name: Pipeline for Node.js on Github Action
+
+# It tells when to start analysing and testing code
+on: push
+
+# Contains the main work to be done
+jobs:
+  build:
+    runs-on: Ubuntu-latest
+
+    steps:
+      name: Checkout code
+      uses: actions/checkout
+
+      name: I wil Echo Now
+      run: echo "Hello My Code"

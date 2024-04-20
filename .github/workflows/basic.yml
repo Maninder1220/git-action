@@ -6,12 +6,20 @@ on: push
 
 # Contains the main work to be done
 jobs:
-  build:
-    runs-on: Ubuntu-latest
-
+  git-checkout:
+    runs-on: ubuntu-latest
     steps:
-      name: Checkout code
-      uses: actions/checkout
+      - name: Git Checkout
+        uses: actions/checkout@v2
 
-      name: I wil Echo Now
-      run: echo "Hello My Code"
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hello World
+        run: echo "Hello World"
+
+  bubye:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Bye World
+        run: echo "Bubye World"
